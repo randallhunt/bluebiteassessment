@@ -46,12 +46,23 @@ Example payloads can be found in [files directory](files)
 ### Part 2
 * The application must offer a way to query a list of objects based on filters.
     * Must filter on object_id, key, and/or value
+* The application should have a retrieval endpoint to return an individual object
 
+## Part 3
+* The application must offer advanced filtering for a list of objects
+    * Equality (`=` is completed in Part 2) - all data types supported
+      * `=`, `!=`
+    * Conditionals (only strings and numbers are supported)
+      * `<`, `>`, `>=`, `<=`
+## Part 4
+* The application must offer the ability to paginate a list of objects
+
+## Part 5
+* Return a list of unique keys in the system
 
 ## Submission
 
-Upon completion of the assessment, please email your point of contact at Blue Bite a link to the repository.
-
+At the completion of your given time constaints, fully document both what you were able to complete and what you would want to do additionally if you had more time. Once completed please email your point of contact at Blue Bite a link to the repository.
 
 ## Local Setup
 
