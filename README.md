@@ -48,16 +48,16 @@ Example payloads can be found in [files directory](files)
     * Must filter on object_id, key, and/or value
 * The application should have a retrieval endpoint to return an individual object
 
-## Part 3
+### Part 3
 * The application must offer advanced filtering for a list of objects
     * Equality (`=` is completed in Part 2) - all data types supported
       * `=`, `!=`
     * Conditionals (only strings and numbers are supported)
       * `<`, `>`, `>=`, `<=`
-## Part 4
+### Part 4
 * The application must offer the ability to paginate a list of objects
 
-## Part 5
+### Part 5
 * Return a list of unique keys in the system
 
 ## Submission
