@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Object List{% endblock %}
+
+{% block nav %}
+    <a href="/keys">List of keys</a> &nbsp; <a href="/upload">Upload new JSON data</a>
+{% endblock %}
+
+{% block body %}
+<div>
+    {% if prev %}
+    <a href="/list?size={{size}}&page={{prev}}"><<</a>
+    {% endif %}
+    &nbsp; Page {{ page }} &nbsp;
+    {% if next %}
+    <a href="/list?size={{size}}&page={{next}}">>></a>
+    {% endif %}
+</div>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Object</th>
+            <th>Properties</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for o in objects %}
+        <tr>
+            <td><a href="{% url 'retrieve' o.id %}">{{ o.id }}</a></td>
+            <td>
+                {% for p in o.props %}{{ p.key }}={{ p.value }}, {% endfor %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
+{% block apiurl %}<a href="/api/list">/api/list</a>{% endblock %}

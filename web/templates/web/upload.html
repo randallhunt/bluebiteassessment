@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Upload new object batch manually{% endblock %}
+
+{% block nav %}
+    <a href="/list">Back to list</a>
+{% endblock %}
+
+{% block body %}
+    {% if message %}
+    <div>{{ message }}</div>
+    <br/><br/><br/>
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <div><label>JSON data</label></div>
+            <div><textarea name="json" rows="10" cols="50"></textarea></div>
+            <div><button type="submit">Submit</button></div>
+        </div>
+    </form>
+{% endblock %}
+
+{% block apiurl %}<a href="/api/upload">/api/upload</a>{% endblock %}

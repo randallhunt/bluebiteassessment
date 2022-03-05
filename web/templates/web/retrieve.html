@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Details for object: {{ object_id }}{% endblock %}
+
+{% block nav %}
+    <a href="/list">Back to list</a>
+{% endblock %}
+
+{% block body %}
+<div>
+    <div><strong>Object ID: {{ object_id }}</strong></div>
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Key</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for p in data %}
+                <tr>
+                    <td>{{ p.key }}</td>
+                    <td>{{ p.value }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
+
+{% block apiurl %}<a href="/api/object/{{ object_id }}">/api/object/{{ object_id }}</a>{% endblock %}

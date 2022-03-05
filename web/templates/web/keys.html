@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}List of keys{% endblock %}
+
+{% block nav %}
+    <a href="/list">Back to list</a>
+{% endblock %}
+
+{% block body %}
+<div><strong>Unique keys</strong></div>
+<div>
+    {{ keys }}
+</div>
+{% endblock %}
+
+{% block apiurl %}<a href="/api/keys">/api/keys</a>{% endblock %}

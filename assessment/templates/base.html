@@ -1,0 +1,21 @@
+<html lang="en">
+    <head>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <div class="nav">
+        {% block nav %}
+        {% endblock %}    
+    </div>
+    <br><br><br>
+    <div class="content">
+        {% block body %}
+        {% endblock %}
+    </div>
+    <br><br><br>
+    <div>
+        <div>API URL: {% block apiurl %}{% endblock %}</div>
+    </div>
+</body>
+</html>
