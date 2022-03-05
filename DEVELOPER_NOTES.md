@@ -10,6 +10,27 @@
 - Anything visible from the Web interface is completely un-styled, as the nature of this assessment was presumably backend, so I didn't want to divert time and attention into CSS skills that would be irrelevant (even though I do have them).
 
 
+## Watch it go
+
+Just like the base app, this can be started with `docker-compose up`
+
+The web interface can be accessed here: [http://localhost:8000/](http://localhost:8000/)
+
+* /
+* /list
+* /keys
+* /upload
+* /object/<object_id>
+
+And the api interfaces can be accessed with the following routes
+
+* /api/upload
+* /api/list
+* /api/object/<object_id>
+* /api/keys
+
+And you'll have to SSH into the image and start Pipenv if you want to run unit tests. I'll assume that anyone actually wanting to do that does not need instructions.  I can assure you that all tests pass as submitted.
+
 ## Implementation notes
 
 - As stated, the instructions were rather vague with regard to what this app would be. On one hand it seemed like a service to which third parties would submit batch data, but on the other hand it also implied there might need to be an interface for querying that data.
